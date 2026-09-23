@@ -137,9 +137,5 @@ If your systems can't afford to go down, let's talk. 👋
   <img src="https://skillicons.dev/icons?i=aws,kubernetes,docker,githubactions,jenkins,grafana,elasticsearch,python,ts,js,bash,react,mongodb,sqlite&perline=14" alt="Tech icons"/>
 </p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=TanviMehta2495&show_icons=true&theme=tokyonight&hide_border=true" height="160" alt="GitHub stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TanviMehta2495&layout=compact&theme=tokyonight&hide_border=true" height="160" alt="Top languages"/>
-</p>
 
 <p align="center"><i>Keeping systems up, and always learning. 🟢</i></p>
