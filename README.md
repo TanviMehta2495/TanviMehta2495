@@ -51,7 +51,7 @@ At one of the largest US home-improvement retailers, the calendar revolves aroun
 
 - 🧪 Designed and ran **load tests simulating peak-year traffic** to find bottlenecks and validate capacity *before* the big day
 - 💸 Led the **Cavisson → K6** performance-testing migration: **$880K in annual savings** and **40% faster test runs**
-- ⚙️ Built and ran CI/CD pipelines powering **80,000+ job executions a day**
+- ⚙️ Built and ran CI/CD pipelines powering **80,000+ job executions**
 - 🤖 Wrote Groovy and Bash auto-recovery for common pipeline failures, **cutting manual toil by 50%**
 - 📊 Built a **React dashboard with a custom data pipeline** tracking Core Web Vitals, which caught regressions early and drove quarter-over-quarter speed gains
 
