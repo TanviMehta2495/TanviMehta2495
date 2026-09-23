@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <style>
+    .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:16px}
+        .c{animation:bl 1s steps(1) infinite}
+    @keyframes bl{50%{opacity:0}}
+  </style>
+  <rect width="1200" height="300" rx="14" fill="#0a0f1c" stroke="#1e293b"/>
+  <rect width="1200" height="40" rx="14" fill="#141c2f"/>
+  <rect y="26" width="1200" height="14" fill="#141c2f"/>
+  <circle cx="26" cy="20" r="7" fill="#ef4444"/><circle cx="50" cy="20" r="7" fill="#f59e0b"/><circle cx="74" cy="20" r="7" fill="#22c55e"/>
+  <text x="600" y="26" class="m" fill="#64748b" font-size="13" text-anchor="middle">a night on call (illustrated)</text>
+  <g class="m">
+    <text x="30" y="80"  fill="#ef4444">[PAGE]  checkout-api  p99 latency &gt; SLO for 5m</text>
+    <text x="30" y="110" fill="#94a3b8">$ open grafana/checkout-slo &amp;&amp; tail ELK: service=checkout level=error</text>
+    <text x="30" y="140" fill="#e2e8f0">  → root cause found · mitigation applied · error budget protected</text>
+    <text x="30" y="170" fill="#22c55e">[RESOLVED]  MTTR ↓   impact contained</text>
+    <text x="30" y="200" fill="#94a3b8">$ write postmortem --blameless --action-items</text>
+    <text x="30" y="230" fill="#2dd4bf">$ automate --so-this-never-pages-again</text>
+    <text x="30" y="262" class="c" fill="#e2e8f0">$ █</text>
+  </g>
+</svg>

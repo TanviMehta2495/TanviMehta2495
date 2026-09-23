@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380">
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity=".45"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .t{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+      .line{stroke-dasharray:1200;stroke-dashoffset:1200;animation:d 3.5s ease-out forwards}
+      @keyframes d{to{stroke-dashoffset:0}}
+    </style>
+  </defs>
+  <rect width="1200" height="380" rx="18" fill="#0b1020"/>
+  <g class="t">
+    <text x="40" y="46" fill="#64748b" font-size="14" letter-spacing="3">TIER-1 RETAIL EVENT · LOAD TEST VS. REAL TRAFFIC</text>
+    <text x="40" y="78" fill="#f1f5f9" font-size="24" font-weight="800">Black Friday doesn't give second chances.</text>
+  </g>
+
+  <!-- chart frame -->
+  <g transform="translate(40,110)">
+    <line x1="0" y1="220" x2="700" y2="220" stroke="#334155"/>
+    <!-- capacity validated by load test -->
+    <line x1="0" y1="38" x2="700" y2="38" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="700" y="28" class="t" fill="#f59e0b" font-size="13" text-anchor="end" font-weight="700">capacity validated by load test</text>
+    <!-- traffic -->
+    <path d="M0 200 C60 196 110 190 160 186 S260 176 300 160 S360 70 400 62 S450 120 480 150 S560 176 620 182 S680 188 700 190 L700 220 L0 220Z" fill="url(#area)"/>
+    <path class="line" d="M0 200 C60 196 110 190 160 186 S260 176 300 160 S360 70 400 62 S450 120 480 150 S560 176 620 182 S680 188 700 190" fill="none" stroke="#2dd4bf" stroke-width="3"/>
+    <circle cx="400" cy="62" r="6" fill="#2dd4bf"/>
+    <text x="400" y="92" class="t" fill="#e2e8f0" font-size="13" text-anchor="middle" font-weight="700">peak traffic</text>
+    <g class="t" fill="#64748b" font-size="12">
+      <text x="0" y="242">Mon</text><text x="165" y="242">Wed</text><text x="385" y="242">Black Friday</text><text x="640" y="242">Cyber Mon</text>
+    </g>
+  </g>
+
+  <!-- stat tiles -->
+  <g class="t" transform="translate(790,110)">
+    <rect width="170" height="104" rx="12" fill="#111a30" stroke="#1e293b"/>
+    <text x="18" y="50" fill="#2dd4bf" font-size="34" font-weight="800">$880K</text>
+    <text x="18" y="80" fill="#94a3b8" font-size="13">annual savings</text>
+    <text x="18" y="96" fill="#64748b" font-size="11">Cavisson → K6 migration</text>
+
+    <rect x="190" width="170" height="104" rx="12" fill="#111a30" stroke="#1e293b"/>
+    <text x="208" y="50" fill="#f59e0b" font-size="34" font-weight="800">80K+</text>
+    <text x="208" y="80" fill="#94a3b8" font-size="13">daily CI/CD jobs</text>
+    <text x="208" y="96" fill="#64748b" font-size="11">across product domains</text>
+
+    <rect y="124" width="170" height="104" rx="12" fill="#111a30" stroke="#1e293b"/>
+    <text x="18" y="174" fill="#a78bfa" font-size="34" font-weight="800">−40%</text>
+    <text x="18" y="204" fill="#94a3b8" font-size="13">test execution time</text>
+
+    <rect x="190" y="124" width="170" height="104" rx="12" fill="#111a30" stroke="#1e293b"/>
+    <text x="208" y="174" fill="#f472b6" font-size="34" font-weight="800">−50%</text>
+    <text x="208" y="204" fill="#94a3b8" font-size="13">manual toil</text>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#64748b"/>
+    </marker>
+    <style>
+      .t{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+      .box{fill:#111a30;stroke:#334155;stroke-width:1.5}
+      .n{font-size:16px;font-weight:700;fill:#f1f5f9}
+      .d{font-size:12px;fill:#94a3b8}
+      .e{stroke:#64748b;stroke-width:2;fill:none;marker-end:url(#a)}
+      .flow{stroke:#f59e0b;stroke-width:2;fill:none;stroke-dasharray:6 8;animation:f 1s linear infinite}
+      @keyframes f{to{stroke-dashoffset:-14}}
+    </style>
+  </defs>
+  <rect width="1200" height="420" rx="18" fill="#0b1020"/>
+  <g class="t">
+    <text x="40" y="44" fill="#64748b" font-size="14" letter-spacing="3">UT DALLAS · DRIVER WEB APP · DEFINED IN AWS CDK (TYPESCRIPT)</text>
+
+    <!-- user -->
+    <rect class="box" x="40" y="170" width="120" height="64" rx="12"/>
+    <text x="100" y="200" class="n" text-anchor="middle">Drivers</text>
+    <text x="100" y="220" class="d" text-anchor="middle">browser</text>
+
+    <!-- CloudFront + S3 -->
+    <rect class="box" x="220" y="90" width="170" height="64" rx="12" style="stroke:#f59e0b"/>
+    <text x="305" y="120" class="n" text-anchor="middle">CloudFront</text>
+    <text x="305" y="140" class="d" text-anchor="middle">global CDN</text>
+    <rect class="box" x="440" y="90" width="170" height="64" rx="12"/>
+    <text x="525" y="120" class="n" text-anchor="middle">S3</text>
+    <text x="525" y="140" class="d" text-anchor="middle">React frontend</text>
+
+    <!-- VPC -->
+    <rect x="220" y="200" width="720" height="180" rx="14" fill="none" stroke="#2dd4bf" stroke-dasharray="6 6" stroke-opacity=".7"/>
+    <text x="236" y="222" fill="#2dd4bf" font-size="13" font-weight="700">VPC · IAM least-privilege roles</text>
+
+    <rect class="box" x="250" y="250" width="180" height="64" rx="12"/>
+    <text x="340" y="280" class="n" text-anchor="middle">App Runner</text>
+    <text x="340" y="300" class="d" text-anchor="middle">backend services</text>
+
+    <rect class="box" x="520" y="236" width="180" height="56" rx="12"/>
+    <text x="610" y="262" class="n" text-anchor="middle">Amazon RDS</text>
+    <text x="610" y="280" class="d" text-anchor="middle">transactional driver records</text>
+    <rect class="box" x="520" y="306" width="180" height="56" rx="12"/>
+    <text x="610" y="332" class="n" text-anchor="middle">MongoDB</text>
+    <text x="610" y="350" class="d" text-anchor="middle">flexible documents</text>
+
+    <rect class="box" x="760" y="270" width="160" height="56" rx="12"/>
+    <text x="840" y="296" class="n" text-anchor="middle">Secrets Mgr</text>
+    <text x="840" y="314" class="d" text-anchor="middle">credentials</text>
+
+    <!-- side: pipeline + observability -->
+    <rect class="box" x="990" y="90" width="170" height="64" rx="12" style="stroke:#a78bfa"/>
+    <text x="1075" y="120" class="n" text-anchor="middle">CodePipeline</text>
+    <text x="1075" y="140" class="d" text-anchor="middle">build → deploy</text>
+    <rect class="box" x="990" y="270" width="170" height="64" rx="12" style="stroke:#f472b6"/>
+    <text x="1075" y="300" class="n" text-anchor="middle">CloudWatch</text>
+    <text x="1075" y="320" class="d" text-anchor="middle">logs · metrics · health</text>
+
+    <!-- edges -->
+    <path class="flow" d="M160 190 C190 150 200 122 220 122"/>
+    <path class="e" d="M390 122 H436"/>
+    <path class="flow" d="M160 214 C200 250 220 282 250 282"/>
+    <path class="e" d="M430 272 H516"/>
+    <path class="e" d="M430 294 C470 294 480 334 516 334"/>
+    <path class="e" d="M700 298 H756"/>
+    <path class="e" d="M1075 154 V200 H960 M1075 154" />
+    <path class="e" d="M940 298 H986"/>
+  </g>
+</svg>
