@@ -55,13 +55,7 @@ At one of the largest US home-improvement retailers, the calendar revolves aroun
 - 🤖 Wrote Groovy and Bash auto-recovery for common pipeline failures, **cutting manual toil by 50%**
 - 📊 Built a **React dashboard with a custom data pipeline** tracking Core Web Vitals, which caught regressions early and drove quarter-over-quarter speed gains
 
-And then there were the nights.
-
-<p align="center">
-  <img src="oncall-terminal.svg" alt="Illustrated on-call terminal: page, investigate in Grafana and ELK, resolve, write postmortem, automate" width="100%"/>
-</p>
-
-As part of a **24/7 SRE on-call rotation**, I watched services against their SLOs in **Grafana and ELK**. I led root-cause analysis and wrote blameless postmortems whose action items **reduced repeat incidents and MTTR**.
+As part of a 24/7 SRE on-call rotation, I built Grafana dashboards that showed API health at a glance: 4xx and 5xx error rates, latency and overall API performance. When something broke, I went to ELK to dig through the logs, trace the failure and find the root cause. Then I wrote blameless postmortems whose action items reduced repeat incidents and MTTR.
 
 
 ## ✈️ Chapter 4 · The leap
