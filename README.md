@@ -45,7 +45,6 @@ My first real system was high-volume **credit-card infrastructure for BP**. When
 - Debugged .NET production issues and resolved critical incidents **within SLA**
 - Wrote PowerShell health checks and monitoring automation, **cutting manual toil by 30%**
 
-The lesson I carried forward: *if you have to do it twice by hand, automate it.*
 
 ## 🔥 Chapter 3 · The Black Friday years
 
