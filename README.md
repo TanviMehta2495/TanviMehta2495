@@ -1,11 +1,5 @@
-<!--
-  HOW TO USE: create a public repo named exactly TanviMehta2495 (same as your username).
-  Upload this README.md and the assets/ folder. GitHub shows it on your profile automatically.
-  Swap each photo placeholder in assets/photos/ for a real .jpg and update the link.
--->
-
 <p align="center">
-  <img src="assets/banner.svg" alt="Tanvi Mehta, Site Reliability Engineer" width="100%"/>
+  <img src="banner.svg" alt="Tanvi Mehta, Site Reliability Engineer" width="100%"/>
 </p>
 
 <p align="center">
@@ -21,12 +15,11 @@
 ---
 
 <p align="center">
-  <img src="assets/timeline.svg" alt="Timeline: 2017 B.E. at NMIT, 2017–21 Infosys, 2021–25 Lowe's, 2025 move to Dallas, 2026 UT Dallas, 2027 graduation" width="100%"/>
+  <img src="timeline.svg" alt="Timeline: 2017 B.E. at NMIT, 2017–21 Infosys, 2021–25 Lowe's, 2025 move to Dallas, 2026 UT Dallas, 2027 graduation" width="100%"/>
 </p>
 
 ## 📖 Chapter 1 · Roots
 
-<img src="assets/photos/roots.svg" alt="College days at NMIT" width="42%" align="right"/>
 
 It started in Karnataka, with a **B.E. in Information Science and Engineering** from Nitte Meenakshi Institute of Technology (2017).
 
@@ -34,7 +27,6 @@ Back then, "production" was just a word in a textbook. I didn't know yet that I'
 
 <!-- ✍️ Add one line in your own words: what first pulled you into engineering? -->
 
-<br clear="right"/>
 
 ## 🛠️ Chapter 2 · Learning that production is personal
 
@@ -45,13 +37,14 @@ My first real system was high-volume **credit-card infrastructure for BP**. When
 - Debugged .NET production issues and resolved critical incidents **within SLA**
 - Wrote PowerShell health checks and monitoring automation, **cutting manual toil by 30%**
 
+The lesson I carried forward: *if you have to do it twice by hand, automate it.*
 
 ## 🔥 Chapter 3 · The Black Friday years
 
 **Lowe's · Senior Software Engineer (SRE) · 2021–2025**
 
 <p align="center">
-  <img src="assets/black-friday.svg" alt="Load-test capacity vs. Black Friday traffic peak, with impact stats: $880K savings, 80K+ daily jobs, 40% faster tests, 50% less toil" width="100%"/>
+  <img src="black-friday.svg" alt="Load-test capacity vs. Black Friday traffic peak, with impact stats: $880K savings, 80K+ daily jobs, 40% faster tests, 50% less toil" width="100%"/>
 </p>
 
 At one of the largest US home-improvement retailers, the calendar revolves around **Tier-1 events** like Black Friday and Cyber Monday. The job was simple to say and hard to do: *be ready before the traffic arrives.*
@@ -65,17 +58,16 @@ At one of the largest US home-improvement retailers, the calendar revolves aroun
 And then there were the nights.
 
 <p align="center">
-  <img src="assets/oncall-terminal.svg" alt="Illustrated on-call terminal: page, investigate in Grafana and ELK, resolve, write postmortem, automate" width="100%"/>
+  <img src="oncall-terminal.svg" alt="Illustrated on-call terminal: page, investigate in Grafana and ELK, resolve, write postmortem, automate" width="100%"/>
 </p>
 
 As part of a **24/7 SRE on-call rotation**, I watched services against their SLOs in **Grafana and ELK**. I led root-cause analysis and wrote blameless postmortems whose action items **reduced repeat incidents and MTTR**.
 
-<img src="assets/photos/bangalore.svg" alt="Bangalore work life" width="60%"/>
 
 ## ✈️ Chapter 4 · The leap
 
 <p align="center">
-  <img src="assets/journey-map.svg" alt="Animated flight path from Bangalore to Dallas, about 14,900 km" width="100%"/>
+  <img src="journey-map.svg" alt="Animated flight path from Bangalore to Dallas, about 14,900 km" width="100%"/>
 </p>
 
 After seven years, I chose to **reset on purpose**. I left a senior role in Bangalore to start an **M.S. in Information Technology and Management at UT Dallas (JSOM)**, where I hold a **3.9 GPA**.
@@ -84,7 +76,6 @@ I didn't come to start over. I came to go deeper into cloud architecture, data e
 
 <!-- ✍️ Add one honest line: what did it feel like to make this move? -->
 
-<img src="assets/photos/dallas.svg" alt="Arriving at UT Dallas" width="60%"/>
 
 ## ☁️ Chapter 5 · Building from zero on AWS
 
@@ -93,7 +84,7 @@ I didn't come to start over. I came to go deeper into cloud architecture, data e
 This time I wasn't inheriting infrastructure. I **designed it from scratch** for a production driver web app, all defined in **AWS CDK (TypeScript)**.
 
 <p align="center">
-  <img src="assets/aws-architecture.svg" alt="AWS architecture: CloudFront and S3 for React, App Runner backend in a VPC, RDS and MongoDB, Secrets Manager, CodePipeline, CloudWatch" width="100%"/>
+  <img src="aws-architecture.svg" alt="AWS architecture: CloudFront and S3 for React, App Runner backend in a VPC, RDS and MongoDB, Secrets Manager, CodePipeline, CloudWatch" width="100%"/>
 </p>
 
 - React frontend on **S3 + CloudFront**, backend on **AWS App Runner**
@@ -110,7 +101,7 @@ Businesses drown in PDFs. LLMs can read them, but calling an LLM for *every* doc
 > *What if the system remembered every layout it had already learned?*
 
 <p align="center">
-  <img src="assets/aiocr-pipeline.svg" alt="AiOcr pipeline: upload, parse, layout signature, template memory or rules plus LLM, validate, human review, store, and a learning loop back to template memory" width="100%"/>
+  <img src="aiocr-pipeline.svg" alt="AiOcr pipeline: upload, parse, layout signature, template memory or rules plus LLM, validate, human review, store, and a learning loop back to template memory" width="100%"/>
 </p>
 
 - 🧠 **Template memory** fingerprints each document's layout. Known layouts are extracted **without an LLM call**. New ones fall back to rules plus LLM-assisted extraction with strict JSON output.
@@ -125,7 +116,6 @@ Businesses drown in PDFs. LLMs can read them, but calling an LLM for *every* doc
 
 ## 🌱 Chapter 7 · What's next
 
-<img src="assets/photos/today.svg" alt="Tanvi today" width="38%" align="right"/>
 
 I graduate in **May 2027**, and I'm looking for **Site Reliability, Cloud and Platform Engineering** roles where I can bring:
 
@@ -135,7 +125,6 @@ I graduate in **May 2027**, and I'm looking for **Site Reliability, Cloud and Pl
 
 If your systems can't afford to go down, let's talk. 👋
 
-<br clear="right"/>
 
 ---
 
