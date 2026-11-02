@@ -101,14 +101,40 @@ Businesses drown in PDFs. LLMs can read them, but calling an LLM for *every* doc
 - 🧠 **Template memory** fingerprints each document's layout. Known layouts are extracted **without an LLM call**. New ones fall back to rules plus LLM-assisted extraction with strict JSON output.
 - ✅ **Validation** checks required fields, dates and totals, and a **human-in-the-loop review** screen shows the PDF side by side with the extracted data.
 - 🔁 **It learns without fine-tuning.** Approved results feed back into template memory, so repeat documents get faster and cheaper over time.
-- 🚀 Built like production: Streamlit UI, Docker, **GitHub Actions CI** (Python 3.11/3.12 matrix), **dev → test → main** promotion and a workflow for promoting learned artifacts between environments
+- 🚀 Built like production: Streamlit UI, **GitHub Actions CI** (Python 3.11/3.12 matrix), **dev → test → main** promotion and a workflow for promoting learned artifacts between environments
 - 💾 Outputs to **JSON, CSV, SQLite** and extraction trace logs
 
-`Python` `Streamlit` `pdfplumber` `LLMs` `SQLite` `Docker` `GitHub Actions`
+`Python` `Streamlit` `pdfplumber` `LLMs` `SQLite` `GitHub Actions`
 
 ➡️ **[Explore the repo](https://github.com/TanviMehta2495/AiOcr)**
 
-## 🌱 Chapter 7 · What's next
+## 💥 Chapter 7 · Breaking things on purpose
+
+### [voting-app-sre: Green dashboards, lost votes](https://github.com/TanviMehta2495/voting-app-sre)
+
+At Lowe's, the rule before every Black Friday was simple: *find the breaking point before customers do.* So I took Docker's sample voting app and ran a game day on it the same way: k6 load tests, then knocking out Redis, Postgres and the worker on purpose.
+
+Every HTTP SLO stayed green, including **p99 latency of 4.2 ms at 200 users**. Underneath:
+
+| What I broke | What users were told | What actually happened | After the fix |
+|---|---|---|---|
+| Traffic spike | "Vote recorded" ✅ | **20,176 votes** stuck in the queue, results ~50 min behind | 24 queued |
+| Postgres restart | "Vote recorded" ✅ | Votes silently **lost** | 0 lost of 3,501 |
+| Redis crash | "Vote recorded" ✅ | **Every queued vote lost** | 0 lost |
+
+The lesson: **monitoring the front door isn't monitoring the user journey.** I added a freshness SLO, fixed the worker to deliver at-least-once with idempotent writes, made the queue durable, and wired a CI gate that fails the build if a chaos run loses a single vote.
+
+- 📏 **SLOs** for availability, latency and freshness, with multi-window burn-rate alerts (and unit tests for the alerts)
+- 🧪 **k6** smoke, load and spike tests whose pass/fail thresholds *are* the SLOs
+- 🔥 **Repeatable chaos experiments** that count accepted-but-lost votes
+- ☸️ **Kubernetes** manifests with liveness/readiness split, PDB, HPA and zero-downtime rollouts, deployed to kind in CI
+- 📝 A **blameless postmortem** and runbooks
+
+`Prometheus` `Grafana` `k6` `Kubernetes` `Docker` `Python` `.NET` `Redis` `PostgreSQL` `GitHub Actions`
+
+➡️ **[Read the game day postmortem](https://github.com/TanviMehta2495/voting-app-sre/blob/main/docs/gamedays/001-silent-backlog-and-lost-votes.md)** · **[Explore the repo](https://github.com/TanviMehta2495/voting-app-sre)**
+
+## 🌱 Chapter 8 · What's next
 
 
 I graduate in **May 2027**, and I'm looking for **Site Reliability, Cloud and Platform Engineering** roles where I can bring:
@@ -126,9 +152,9 @@ If your systems can't afford to go down, let's talk. 👋
 
 | | |
 |---|---|
-| **Reliability** | SLIs/SLOs · Incident Response · Postmortems & RCA · On-Call · Toil Reduction |
+| **Reliability** | SLIs/SLOs · Error Budgets & Burn-Rate Alerting · Incident Response · Postmortems & RCA · Chaos Engineering · On-Call · Toil Reduction |
 | **Performance** | K6 · Cavisson · Load & Stress Testing · Capacity Planning · Core Web Vitals |
-| **Observability** | Grafana · ELK Stack · AWS CloudWatch |
+| **Observability** | Prometheus · Grafana · ELK Stack · AWS CloudWatch |
 | **Cloud** | AWS (EC2, S3, VPC, IAM, ALB, App Runner, CloudFront, Lambda, CDK, RDS, Secrets Manager) |
 | **CI/CD & Containers** | Jenkins · GitHub Actions · AWS CodePipeline · Docker · Kubernetes (EKS) |
 | **Code & Data** | Python · TypeScript · JavaScript · Bash · Groovy · SQL · MongoDB · SQLite · React |
